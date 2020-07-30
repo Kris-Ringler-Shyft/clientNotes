@@ -40,25 +40,23 @@
             <p>Clients</p>
             <!-- for each client -->
             <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"></a>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Client 1</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <!--for each note on each client -->
                     <li>
-                        <a href="#">Home 1</a>
+                        <a href="#">Note 1</a>
                     </li>
                     <li>
-                        <a href="#">Home 2</a>
+                        <a href="#">Note 2</a>
                     </li>
                     <li>
-                        <a href="#">Home 3</a>
+                        <a href="#">Note 3</a>
                     </li>
                 </ul>
             </li>
+
             <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Client 2</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
                         <a href="#">Page 1</a>
