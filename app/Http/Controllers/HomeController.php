@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Client;
 use Illuminate\Http\Request;
 use App\Note;
+use App\ClientNote;
 
 class HomeController extends Controller
 {
@@ -12,12 +13,13 @@ class HomeController extends Controller
     {
         $clients = Client::all();
         $notes = Note::all();
-
+        $client_notes = ClientNote::all();
 
 
         return view('layouts.app', [
             'clients' => $clients,
-            'notes' => $notes
+            'notes' => $notes,
+            'client_notes' => $client_notes
         ]);
     }
 

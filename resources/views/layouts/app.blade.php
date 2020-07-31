@@ -45,15 +45,10 @@
             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{$client->name}}</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <!--for each note on each client -->
-                    <li>
-                        <a href="client">Note 1</a>
-                    </li>
-                    <li>
-                        <a href="client">Note 2</a>
-                    </li>
-                    <li>
-                        <a href="client">Note 3</a>
-                    </li>
+                    <li>test</li>
+                  @foreach($client_notes as $c_note)
+                <li>{{$c_note}}</li>
+                  @endforeach
                 </ul>
             </li>
 
