@@ -42,17 +42,17 @@
             @foreach($clients as $client)
 
             <li class="active">
-            <a href="/client/{{$client->id}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{$client->name}}</a>
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{$client->name}}</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <!--for each note on each client -->
                     <li>
-                        <a href="#">Note 1</a>
+                        <a href="client">Note 1</a>
                     </li>
                     <li>
-                        <a href="#">Note 2</a>
+                        <a href="client">Note 2</a>
                     </li>
                     <li>
-                        <a href="#">Note 3</a>
+                        <a href="client">Note 3</a>
                     </li>
                 </ul>
             </li>
@@ -67,20 +67,12 @@
 
     <!-- Page Content -->
     <div id="content" class="notes col-sm-10">
-        <h1>Notes Go Here</h1>
+        <h2>Note Content</h2>
 
 
         @yield('note')
 
 
-
-
-        <form action="/create-note" method="post">
-            <input type="text" name="note_title" placeholder="Title">
-            <input type="text" name="note_content" placeholder="Content">
-            {{csrf_field()}}
-            <button type="submit">Create Note</button>
-        </form>
     </div>
 </div>
 </div>
