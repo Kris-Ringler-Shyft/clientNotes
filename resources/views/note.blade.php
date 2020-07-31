@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('main-content')
 
+
+test
 
 @endsection
