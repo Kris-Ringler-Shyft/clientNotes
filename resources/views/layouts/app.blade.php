@@ -42,7 +42,7 @@
             @foreach($clients as $client)
 
             <li class="active">
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{$client->name}}</a>
+            <a href="/client/{{$client->id}}" ">{{$client->name}}</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <!--for each note on each client -->
 
@@ -78,3 +78,8 @@
 
 </script>
 </html>
+
+
+<!--
+    **dropdown classes within client sidebar**
+    data-toggle="collapse" aria-expanded="false" class="dropdown-toggle -->

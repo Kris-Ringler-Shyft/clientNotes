@@ -17,6 +17,6 @@ class NoteController extends Controller
 
         $note->save();
 
-        return redirect('/client');
+        return redirect('/client/{clientId}');
     }
 }
