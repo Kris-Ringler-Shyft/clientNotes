@@ -58,6 +58,11 @@
             </li>
 
             @endforeach
+        <form action="/create-client" method="post">
+            <input type="text" name="name" placeholder="Client Name">
+            {{csrf_field()}}
+            <button type="submit">Create Client</button>
+        </form>
     </nav>
 
     <!-- Page Content -->
@@ -72,6 +77,13 @@
         </ul>
 
         @endforeach
+
+        <form action="/create-note" method="post">
+            <input type="text" name="note_title" placeholder="Title">
+            <input type="text" name="note_content" placeholder="Content">
+            {{csrf_field()}}
+            <button type="submit">Create Note</button>
+        </form>
     </div>
 </div>
 </div>
