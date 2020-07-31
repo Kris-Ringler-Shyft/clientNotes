@@ -8,7 +8,7 @@ class Note extends Model
 {
     public function clients()
     {
-        return $this->hasMany(Client::class);
+        return $this->belongsToMany(Client::class);
     }
 
     public function user()

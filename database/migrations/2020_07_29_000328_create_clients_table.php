@@ -19,6 +19,9 @@ class CreateClientsTable extends Migration
             $table->timestamps();
         });
 
+
+
+
         /* add notes*/
     }
 
