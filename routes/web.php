@@ -20,4 +20,4 @@ Route::post('/create-client', 'ClientController@create');
 Route::post('/create-note', 'NoteController@create');
 
 
-Route::get('/client/{$id}', 'HomeController@client');
+Route::get('/client', 'HomeController@client');
