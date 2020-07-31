@@ -27,12 +27,14 @@ class HomeController extends Controller
     {
         $clients = Client::all();
         $notes = Note::all();
+        $client_notes = ClientNote::all();
 
 
 
         return view('client', [
             'clients' => $clients,
-            'notes' => $notes
+            'notes' => $notes,
+            'client_notes' => $client_notes
         ]);
     }
 }
