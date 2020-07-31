@@ -18,7 +18,7 @@
 
         #sidebar {
 
-            height: 100vh;
+
             background: #7386D5;
 
 
