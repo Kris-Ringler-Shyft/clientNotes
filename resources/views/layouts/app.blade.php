@@ -39,55 +39,51 @@
         <ul class="list-unstyled components">
             <p>Clients</p>
             <!-- for each client -->
+            @foreach($clients as $client)
+
             <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"></a>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{$client->name}}</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <!--for each note on each client -->
                     <li>
-                        <a href="#">Home 1</a>
+                        <a href="#">Note 1</a>
                     </li>
                     <li>
-                        <a href="#">Home 2</a>
+                        <a href="#">Note 2</a>
                     </li>
                     <li>
-                        <a href="#">Home 3</a>
+                        <a href="#">Note 3</a>
                     </li>
                 </ul>
             </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Portfolio</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
 
+            @endforeach
+        <form action="/create-client" method="post">
+            <input type="text" name="name" placeholder="Client Name">
+            {{csrf_field()}}
+            <button type="submit">Create Client</button>
+        </form>
     </nav>
+
     <!-- Page Content -->
     <div id="content" class="notes col-sm-10">
         <h1>Notes Go Here</h1>
+
+        @foreach($notes as $note)
+
+        <h2>{{$note->note_title}}</h2>
         <ul>
-            <li>note content1</li>
-            <li>note content2</li>
-            <li>note content3</li>
+        <li>{{$note->note_content}}</li>
         </ul>
+
+        @endforeach
+
+        <form action="/create-note" method="post">
+            <input type="text" name="note_title" placeholder="Title">
+            <input type="text" name="note_content" placeholder="Content">
+            {{csrf_field()}}
+            <button type="submit">Create Note</button>
+        </form>
     </div>
 </div>
 </div>
