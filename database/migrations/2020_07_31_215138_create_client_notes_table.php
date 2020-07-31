@@ -13,7 +13,7 @@ class CreateClientNotesTable extends Migration
      */
     public function up()
     {
-        Schema::create('client_note', function (Blueprint $table) {
+        Schema::create('client_notes', function (Blueprint $table) {
 
             $table->unsignedBigInteger('client_id');
             $table->unsignedBigInteger('note_id');
