@@ -56,20 +56,22 @@
                     </li>
                 </ul>
             </li>
+
             @endforeach
-
-
-
     </nav>
 
     <!-- Page Content -->
     <div id="content" class="notes col-sm-10">
         <h1>Notes Go Here</h1>
+
+        @foreach($notes as $note)
+
+        <h2>{{$note->note_title}}</h2>
         <ul>
-            <li>note content1</li>
-            <li>note content2</li>
-            <li>note content3</li>
+        <li>{{$note->note_content}}</li>
         </ul>
+
+        @endforeach
     </div>
 </div>
 </div>
