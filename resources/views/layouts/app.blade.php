@@ -42,7 +42,7 @@
             @foreach($clients as $client)
 
             <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{$client->name}}</a>
+            <a href="/client/{{$client->id}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{$client->name}}</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <!--for each note on each client -->
                     <li>
@@ -69,14 +69,11 @@
     <div id="content" class="notes col-sm-10">
         <h1>Notes Go Here</h1>
 
-        @foreach($notes as $note)
 
-        <h2>{{$note->note_title}}</h2>
-        <ul>
-        <li>{{$note->note_content}}</li>
-        </ul>
+        @yield('note')
 
-        @endforeach
+
+
 
         <form action="/create-note" method="post">
             <input type="text" name="note_title" placeholder="Title">
@@ -94,64 +91,3 @@
 
 </script>
 </html>
-
-
-{{-- <div class="row">
-    <!-- Sidebar -->
-    <nav id="sidebar" class="col-sm-4">
-        <div class="sidebar-header">
-            <h3>Bootstrap Sidebar</h3>
-        </div>
-
-        <ul class="list-unstyled components">
-            <p>Dummy Heading</p>
-            <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                        <a href="#">Home 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 3</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Portfolio</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
-
-    </nav>
-    <!-- Page Content -->
-    <div id="content" class="col-sm-8">
-        <h1>Note Title</h1>
-            <ul>
-                <li>note content 1</li>
-                <li>note content 2</li>
-                <li>note content 3</li>
-            </ul>
-    </div>
-</div> --}}
