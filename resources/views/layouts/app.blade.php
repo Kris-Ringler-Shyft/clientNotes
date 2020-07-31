@@ -39,8 +39,10 @@
         <ul class="list-unstyled components">
             <p>Clients</p>
             <!-- for each client -->
+            @foreach($clients as $client)
+
             <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Client 1</a>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{$client->name}}</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <!--for each note on each client -->
                     <li>
@@ -54,30 +56,12 @@
                     </li>
                 </ul>
             </li>
+            @endforeach
 
-            <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Client 2</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Portfolio</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
+
 
     </nav>
+
     <!-- Page Content -->
     <div id="content" class="notes col-sm-10">
         <h1>Notes Go Here</h1>

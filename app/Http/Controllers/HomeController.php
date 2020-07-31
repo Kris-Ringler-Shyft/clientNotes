@@ -2,12 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Client;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('layouts.app');
+        $clients = Client::all();
+
+
+
+
+        return view('layouts.app', [
+            'clients' => $clients
+        ]);
     }
 }
