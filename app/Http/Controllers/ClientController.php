@@ -22,8 +22,9 @@ class ClientController extends Controller
     public function show($clientId)
     {
         $clients = Client::all();
-        $notes = Note::all();
+        $notes = Note::where('client_id', $clientId)->get();
         $client_notes = ClientNote::where('client_id', $clientId)->get();
+
         $client = Client::find($clientId);
 
 

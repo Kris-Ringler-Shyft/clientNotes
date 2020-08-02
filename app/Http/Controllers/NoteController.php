@@ -12,7 +12,7 @@ class NoteController extends Controller
 
         $note = new Note();
         $note->author_id = 1;
-        $note->client_id = 1;
+        $note->client_id = 2;
         $note->note_title = $request->note_title;
         $note->note_content = $request->note_content;
 

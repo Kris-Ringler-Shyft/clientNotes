@@ -8,10 +8,10 @@
 
         <div id="content">
             <h2>Client Name: {{$client->name}}</h2>
-            @yield('note')
-            {{$client_notes}}
 
-            INDIVIDUAL CLIENT NOTES WILL GO HERE
+            {{$client_notes}}
+            {{$notes}}
+
         </div>
         <h3>create note</h3>
         <form action="/create-note" method="post">
