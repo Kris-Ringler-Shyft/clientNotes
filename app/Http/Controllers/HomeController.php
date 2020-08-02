@@ -22,19 +22,4 @@ class HomeController extends Controller
             'client_notes' => $client_notes
         ]);
     }
-
-    public function client()
-    {
-        $clients = Client::all();
-        $notes = Note::all();
-        $client_notes = ClientNote::all();
-
-
-
-        return view('client', [
-            'clients' => $clients,
-            'notes' => $notes,
-            'client_notes' => $client_notes
-        ]);
-    }
 }

@@ -7,16 +7,11 @@
     <div class="container">
 
         <div id="content">
-            @foreach($notes as $note)
-            <div class="title">
-            <h2>{{$note->note_title}}</h2>
-            </div>
-            <br />
-            <p>
-                {{$note->note_content}}
-            </p>
+            <h2>Client Name: {{$client->name}}</h2>
+            @yield('note')
+            {{$client_notes}}
 
-            @endforeach
+            INDIVIDUAL CLIENT NOTES WILL GO HERE
         </div>
         <h3>create note</h3>
         <form action="/create-note" method="post">

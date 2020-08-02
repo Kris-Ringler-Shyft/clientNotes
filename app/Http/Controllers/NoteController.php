@@ -9,6 +9,7 @@ class NoteController extends Controller
 {
     public function create(Request $request)
     {
+
         $note = new Note();
         $note->author_id = 1;
         $note->client_id = 1;
@@ -17,6 +18,6 @@ class NoteController extends Controller
 
         $note->save();
 
-        return redirect('/client');
+        return redirect('/client/{clientId}');
     }
 }
