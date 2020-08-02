@@ -8,16 +8,9 @@
 
         <div id="content">
             <h2>Client Name: {{$client->name}}</h2>
-            {{-- @foreach($notes as $note)
-            <div class="title">
-            <h3>{{$note->note_title}}</h3>
-            </div>
-            <br />
-            <p>
-                {{$note->note_content}}
-            </p>
+            @yield('note')
+            {{$client_notes}}
 
-            @endforeach --}}
             INDIVIDUAL CLIENT NOTES WILL GO HERE
         </div>
         <h3>create note</h3>
