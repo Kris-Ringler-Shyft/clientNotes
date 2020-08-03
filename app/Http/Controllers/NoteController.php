@@ -4,20 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Note;
+use Illuminate\Support\Facades\Auth;
 
 class NoteController extends Controller
 {
     public function create(Request $request)
     {
 
-        $note = new Note();
-        $note->author_id = 1;
-        $note->client_id = 2;
-        $note->note_title = $request->note_title;
-        $note->note_content = $request->note_content;
+        if ($request) {
 
-        $note->save();
 
-        return redirect('/client/{clientId}');
+
+            $note = new Note();
+            $note->author_id = Auth::id();
+            $note->client_id = $request->clients_select;
+            $note->note_title = $request->note_title;
+            $note->note_content = $request->note_content;
+
+            $note->save();
+
+            return redirect('/');
+        }
     }
 }
